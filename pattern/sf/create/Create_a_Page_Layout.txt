@@ -1,0 +1,2 @@
+setup>obj m>...>page layouts>new>fill>save>fill>quik save
+    drag and drop>Qsave>yes

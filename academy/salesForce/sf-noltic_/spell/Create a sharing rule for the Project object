@@ -1,0 +1,17 @@
+<!-- On the Project object, create a custom field:  -->
+Setup > Object Manager > Project > Fields & Relationships > new 
+    -> Picklist -> next
+    -> fill -> Enter values, with each value separated by a new line -> next
+    <!-- Make the field visible to all profiles and add it to all page layouts -->
+    -> Visible -> next -> checkbox: Add Field -- Page Layout Name -- Project Layout
+> save
+<!-- Create a sharing rule for the Project object:  -->
+setup>Sharing Settings>
+    ->Manage sharing settings: выбери свой объект
+    -> Имя Sharing Rules: new > fill 
+        -> Rule Type: Based on criteria
+        -> Select which records to be shared
+            -> Field: Priority, Operator: equals, Value: High
+            -> Select the users to share with: role -> имя
+    -> Organization-Wide Defaults: Private
+save

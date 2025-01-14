@@ -1,0 +1,6 @@
+SELECT * FROM movies WHERE year not between 2000 and 2010
+SELECT * FROM movies WHERE title LIKE "Toy Story%";
+SELECT * FROM movies WHERE director NOT LIKE "John Lasseter"
+SELECT * FROM north_american_cities WHERE country = "Mexico" ORDER BY "population" desc LIMIT 2;
+
+

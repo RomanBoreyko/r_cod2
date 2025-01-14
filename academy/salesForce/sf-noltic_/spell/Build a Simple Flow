@@ -1,0 +1,15 @@
+setup>flow>new>screen: next>
+    element: screen
+        label: My Screen
+        Configure Footer: checkbox: Hide Previous,  Hide Pause
+            Next or Finish Button:  checkbox: Use the standard label
+        components: Display Text 
+            -> api -> myText
+            -> textBox -> Hello, World!
+        done
+    connect Start to screen
+    save -> label: Sample Flow
+        done
+    Flow Builder bar -> Activate
+setup>Permission Sets>clone: Run Flows Permission
+    Object Settings > Flow Interviews > Available, Visible -> save

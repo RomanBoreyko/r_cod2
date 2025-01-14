@@ -1,0 +1,37 @@
+// сделал 
+sudo tar czvf settings.tar.gz ~/.config
+// в бекап
+
+
+большой файл для гита
+удалял из коммита
+git log
+git rebase -i HEAD~2
+не сработало
+
+git clone https://github.com/newren/git-filter-repo
+cd git-filter-repo
+sudo python3 setup.py install
+cd ~/Downloads/r0_cod
+git filter-repo --path settings.tar.gz --invert-paths
+git push --force origin main
+sudo pip3 install git-filter-repo
+git filter-repo --path settings.tar.gz --invert-paths
+
+
+sudo apt-get install neovim
+sudo apt-get install python3-neovim
+https://notabug.org/Black_Triangle/My_nvim/src/master/init.vim
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+vim sucks
+
+sudo apt-get install geany-plagins
+
+
+

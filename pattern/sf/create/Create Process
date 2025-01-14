@@ -1,0 +1,45 @@
+Setup>Process Builder>New: 
+    Name: R0 
+    Description: hw4pg_process
+    Process start: record changes
+    start
+        add obj: 
+            obj: Account
+            Trigger: A record is created or edited
+        add Criteria: ;Criteria: Account shipping address is updated
+            name: Account shipping address is updated
+            # ; Create rows:
+            Set Conditions:
+                field: 
+                    Shipping Street
+                    Shipping City
+                    Shipping State/Province
+                    Shipping Zip/Postal Code
+                    Shipping Country
+                Operator: Is changed
+                Type: Boolean
+                Value:True
+            Conditions: checkbox: Any of the conditions are met (OR)
+        # ;Action: Update the mailing address fields in all related contacts
+        add Action:
+            act type: update records
+            checkbox: Select a record related to the Account > Contacts
+            # ; Create rows:
+            Set Conditions:
+                Mailing Street
+                    Type: Field Reference
+                    Value: Account: Shipping Street
+                Mailing City
+                    Type: Field Reference
+                    Value: Account: Shipping City
+                Mailing State/Province
+                    Type: Field Reference
+                    Value: Account: Shipping State/Province
+                Mailing Zip/Postal Code
+                    Type: Field Reference
+                    Value: Account: Shipping Zip/Postal Code
+                Mailing Country
+                    Type: Field Reference
+                    Value: Account: Shipping Country
+            save
+    activate

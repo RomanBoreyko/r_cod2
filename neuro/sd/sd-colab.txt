@@ -1,0 +1,54 @@
+
+https://colab.research.google.com/drive/1MxdPyM7kxUIE06PBYbsyV86_-NHdZ3Ju#scrollTo=ZGV_5H4xrOSp
+
+https://drive.google.com/drive/u/0/folders/1egJnPuwtx1-HOJH8ufINYI6RKybZQOVZ
+1. Скрипт на гдрайв
+2. Положил модели в гдрайв
+3. В скрипте добавил путь к моделе
+4. запустил
+5. потестил
+6. появилась директория outputs результаты генережки
+7. появился файлик ui-config.json
+	выключаем сервак
+	скачиваем открываем
+	в нем negative prompt/value": "ugly, nuked, ...",
+	возвращаем заменяем
+
+
+Задачи:
+	0. Какие модели нужны
+		- F222 - body
+		https://huggingface.co/acheong08/f222/blob/main/f222.ckpt
+		- GhostMix - Ghost in the Shell style
+		https://civitai.com/models/36520/ghostmix
+		- Inkpunk Diffusion - Dreambooth-trained model with a very distinct illustration style
+		https://huggingface.co/Envvi/Inkpunk-Diffusion
+		- Deliberate v2
+		https://civitai.com/models/4823/deliberate
+	0.2. ТИПЫ моделей
+	https://stable-diffusion-art.com/embedding/
+	https://stable-diffusion-art.com/lora/
+	https://stable-diffusion-art.com/hypernetwork/
+	https://stable-diffusion-art.com/models/
+	
+		чекпоинт - содержит все что нужно для генерации
+			textual inversions - добавление файлика с ключевыми словами
+			ЛоРА - маленькие патчи для модификаторов стиля
+			hypernetworks - добавление модулей
+	2. узнать про
+		- dreambooth или Additional training
+		https://arxiv.org/abs/2208.12242
+		- LoRA
+	3. Узнать как
+		- скормить нейронке картинки стиль по которому хочешь чтобы она генерировала твои промпты
+5. inpainting fixing defects
+https://stable-diffusion-art.com/inpainting_basics/
+	step-by-step
+		prompt
+		inpainting model
+			v1.5 inpainting model
+			checkpoint file
+		inpaint mask
+		settings
+		add obj
+		

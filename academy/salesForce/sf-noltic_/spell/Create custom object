@@ -1,0 +1,8 @@
+Contact
+    lookup > related to: contact > gymVisit_hw3_contactFN
+    data > gymVisit_hw3_dataFN
+    data/Time > gymVisit_hw3_dataTimeFN
+    Number > gymVisit_hw3_DurationFN
+    Picklist > gymVisit_hw3_CardTypeFN   
+        -> Enter values, with each value separated by a new line
+            Silver, Gold, Black

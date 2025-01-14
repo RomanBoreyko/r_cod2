@@ -1,0 +1,6 @@
+let r0 = [];
+for(const i of arr)r0=r0.concat(i);
+return r0.sort((a,b)=>b-a).join(">");
+
+//
+const bigToSmall = arr => [].concat(...arr).sort((a,b) => b-a).join('>')

@@ -1,0 +1,3 @@
+opensuse отключение
+sudo systemctl stop sshd
+sudo systemctl disable sshd

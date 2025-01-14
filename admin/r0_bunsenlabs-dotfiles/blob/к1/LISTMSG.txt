@@ -1,0 +1,23 @@
+<b>Configuration name: к1</b>	
+Saved at Сб 10 июн 2023 20:06:29 EEST
+
+Openbox theme:  Dragon
+GTK theme:  Dragon;  Icon Theme: Papirus-Bunsen-Dark-black\n
+Background set with nitrogen:
+	/home/r0-bl/Pictures/wallpapers/bunsen/default/Lithium-grey-logo-only.png;
+	
+Running Conkys:	
+	~/.config/conky/BL-Beryllium-conky.conf
+	~/.config/conky/BL-Beryllium-conky2.conf
+	~/.config/conky/BL-Beryllium-conky3.conf
+
+Running Tint2s:	
+	~/.config/tint2/lithium-vertical.tint2rc
+
+dmenu config:  ~/.config/dmenu/dmenu-bind.sh\n
+Lightdm config:  /etc/lightdm/lightdm-gtk-greeter.conf\n(password will be needed to restore)\n
+X config:  ~/.Xresources\n
+Bash config:  ~/.bashrc\n
+Compositor settings: ~/.config/picom.conf\n
+jgmenu settings: ~/.config/jgmenu/jgmenurc\n
+Lxterminal config:  ~/.config/lxterminal/lxterminal.conf\n

@@ -1,0 +1,66 @@
+// проверка на вирусы
+https://www.virustotal.com/gui/home/upload
+
+// зависимости
+    pip install fastapi[all]
+    pip install pony
+    pip install bit
+    pip install pyTelegramBotAPI
+
+// роутер на get-запрос по пути "/hello":
+import fastapi
+
+api = fastapi.FastAPI()
+
+@api.get('/hello')
+def api_hello():
+    return {"hello":'from api!'}
+
+// 
+uvicorn main:api --reload
+uvicorn - это сам сервер на котором работает наш проект, main - файл проекта откуда мы передаем ему с помощью двоеточия созданный нами объект api, а параметр --reload заставляет сервер перезагружаться каждый раз, когда мы редактируем код проекта и все изменения вносятся в наш API моментально! 
+http://127.0.0.1:8000/hello
+
+//
+postman скачал с сайта в тар архиве
+открыл за регался 
+wr@
+R0-
+7G6xz3BstUFKfhw
+
+ При разработке своего API и программ работающих с сетью вы довольно часто будете встречать такие термины:
+
+    Данные (Data)
+    Сервер
+    Клиент
+    Модель TCP\IP
+    TCP и UDP протоколы
+    HTTP/HTTPS
+    Путь (Path)
+    Приложение (App)
+    Запрос (request)
+    Ответ (responce)
+    Поисковый запрос (query)
+    Get/Post/Put/Patch/Delete/И др. запросы
+    JSON
+    REST API или RESTful API
+    Зависимости (Dependencies)
+    SQL
+    NoSQL
+    Middleware
+    Авторизация и аутентификация
+    CORS
+    WebSockets
+
+
+//
+
+sudo pacman -S openssh
+sudo systemctl enable sshd
+sudo systemctl start sshd
+
+pamac install putty
+
+ranger C-h 
+
+

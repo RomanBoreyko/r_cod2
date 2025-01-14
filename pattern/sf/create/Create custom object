@@ -1,0 +1,14 @@
+Contact
+    lookup > related to: contact > gymVisit_hw3_contactFN
+    data > gymVisit_hw3_dataFN
+    data/Time > gymVisit_hw3_dataTimeFN
+    Number > gymVisit_hw3_DurationFN
+    Picklist > gymVisit_hw3_CardTypeFN   
+        -> Enter values, with each value separated by a new line
+            Silver, Gold, Black
+setup>obj M>create>custom obj>
+    fill->check>
+        Allow Search
+        Launch New Custom Tab Wizard after saving this custom object
+    next>next>Deselect Include Tab
+        "select that wat you need"

@@ -1,0 +1,23 @@
+setup > obj M > obj>F&R > New >
+
+//picklist field choose options from a list
+setup > obj M > obj>F&R > New > checkbox >
+    fill
+    check: Enter values, with each value separated by a new line >
+        fill
+    check: Use first value as default value
+    leave selected ... layout
+// more
+Lookup Relationship >	Account >
+    Related To: Account
+    Always require a value in this field.
+Currency > 	Average Annual Electric Cost >
+    Length: 16
+    Decimal Places: 2
+    Help Text: Annual cost per square foot.
+    Always require a value in this field.
+Number > 	Annual Energy Usage (kWh) >
+    Help Text: Usage per square foot.
+    Always require a value in this field.
+Text Area (Long) > Audit Notes >
+    # Visible Lines: 5

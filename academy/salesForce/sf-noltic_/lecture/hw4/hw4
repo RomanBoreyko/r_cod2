@@ -1,0 +1,107 @@
+goal
+https://trailhead.salesforce.com/en/content/learn/modules/business_process_automation
+
+automata
+Record Change -- A record is created or edited
+Invocable -- It’s called by another process
+Platform Event -- A platform event message is received
+
+# ; Create a process that updates child contacts’ mailing addresses when the parent account's shipping address changes. If you use an existing playground to complete this challenge, deactivate any validation rules you created for the Contact or Account objects in the playground.
+
+Create Process
+    Setup>Process Builder>New: 
+        Name: R0 
+        Description: hw4pg_process
+        Process start: record changes
+        start
+            add obj: 
+                obj: Account
+                Trigger: A record is created or edited
+            add Criteria: ;Criteria: Account shipping address is updated
+                name: Account shipping address is updated
+                # ; Create rows:
+                Set Conditions:
+                    field: 
+                        Shipping Street
+                        Shipping City
+                        Shipping State/Province
+                        Shipping Zip/Postal Code
+                        Shipping Country
+                    Operator: Is changed
+                    Type: Boolean
+                    Value:True
+                Conditions: checkbox: Any of the conditions are met (OR)
+            # ;Action: Update the mailing address fields in all related contacts
+            add Action:
+                act type: update records
+                checkbox: Select a record related to the Account > Contacts
+                # ; Create rows:
+                Set Conditions:
+                    Mailing Street
+                        Type: Field Reference
+                        Value: Account: Shipping Street
+                    Mailing City
+                        Type: Field Reference
+                        Value: Account: Shipping City
+                    Mailing State/Province
+                        Type: Field Reference
+                        Value: Account: Shipping State/Province
+                    Mailing Zip/Postal Code
+                        Type: Field Reference
+                        Value: Account: Shipping Zip/Postal Code
+                    Mailing Country
+                        Type: Field Reference
+                        Value: Account: Shipping Country
+                save
+        activate
+
+https://trailhead.salesforce.com/content/learn/modules/screen_flow_distribution
+Build a Simple Flow
+    setup>flow>new>screen: next>
+        element: screen
+            label: My Screen
+            Configure Footer: checkbox: Hide Previous,  Hide Pause
+                Next or Finish Button:  checkbox: Use the standard label
+            components: Display Text 
+                -> api -> myText
+                -> textBox -> Hello, World!
+            done
+        connect Start to screen
+        save -> label: Sample Flow
+            done
+        Flow Builder bar -> Activate
+    setup>Permission Sets>clone: Run Flows Permission
+        Object Settings > Flow Interviews > Available, Visible -> save
+
+https://trailhead.salesforce.com/en/content/learn/modules/flow-testing-and-distribution/enable-user-access
+Grant Permissions to Flow Users
+    Для запуска требуется разрешение пользователя
+    Поле пользователя потока включено на странице сведений о пользователе
+    Если для отдельного потока выбрано Переопределение поведения по умолчанию и ограничение доступа к включенным профилям или наборам разрешений, доступ к этому потоку предоставляется пользователям по профилю или набору разрешений
+    
+    Определите пользователей, которые будут управлять потоком.
+    Создайте набор разрешений, включающий разрешение "Потоки выполнения".
+    Назначьте набор разрешений определенным пользователям.
+
+Add the Flow to the Home Page
+    setup>Lightning App Builder>home page -> next > label:name-> next> Clone Salesforce Default Page->Home Page Default
+        finish
+    Drag a Flow component
+    # For Flow, select New Contact
+    ?????????????????????????????????
+        save>activate
+            org default->access org default -> save
+            app default -> assigment #page
+            app&profile->review assigment 
+
+
+4 использования
+
+
+
+просмотреть запись
+повторить действия
+Домашнє завдання №4 :eyes:
+1. Create field “Duplicate” on the object Property and mark it as True during record creation (using flow) if record with same name already exist. Update duplicate field in existing object to True as well.
+2. Create Screen Flow to register new Gym Visits. Fields: date, type. If Type Gold show up second screen to choose Trainer Name (create look up to Contact)
+

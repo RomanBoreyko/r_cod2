@@ -1,0 +1,4 @@
+update-alternatives --config x-www-browser
+Menu --> System --> Edit Debian Alternatives -- > x-www-browser
+не тащило
+выбрал по умолчанию в самом браузере

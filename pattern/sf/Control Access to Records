@@ -1,0 +1,5 @@
+Create custom object
+    setup>Object Manager>create: custom object->заполнить поля->save
+Configure organization-wide default sharing settings for the Project object so that Project records are visible only to the record owner and to users above them in the role hierarchy.
+    <!-- record owner and to users above them -->
+    setup>Sharing Settings>edit->Project: Privat | privat | Grant Access Using Hierarchies: checkbox -> save

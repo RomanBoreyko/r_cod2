@@ -1,0 +1,2 @@
+setup>obj m>...>Page Layouts > Page Layout Assignment>Edit Assignment>
+    Custom: Sales Profile>Page Layout To Use field, select Energy Audit Sales Layout>

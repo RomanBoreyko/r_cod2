@@ -1,0 +1,22 @@
+function isBoolean(val) {
+   return val === false || val === true;
+}
+
+//es6
+const isBoolean = val => 'boolean' === typeof val;
+
+//jQuery
+jQuery.type(true); //return "boolean"
+
+//react
+MyComponent.propTypes = {
+  children: PropTypes.bool.isRequired
+};
+
+//vanila
+function isBoolean( n ) {
+    return !!n === n;
+}
+function isBoolean( n ) {
+    return typeof n === 'boolean';
+}

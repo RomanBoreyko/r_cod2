@@ -1,0 +1,35 @@
+
+./monerod
+chmod +x monerod monero-wallet-cli monero-wallet-rpc
+
+// как ставить узел в определенное устройство и директорию ?
+    ./monerod --data-dir 
+    ./monerod --data-dir /media/orangepi/ee260208-3c46-4437-8489-53786aa18dbe/R_monero
+
+status
+
+
+set_daemon localhost:18081
+
+Ваш кошелек создан!
+Чтобы начать синхронизацию с демоном, используйте команду "refresh".
+Используйте команду "help", чтобы увидеть упрощенный список доступных команд.
+Используйте команду "help all", чтобы увидеть список всех доступных команд.
+Используйте "help <command>", чтобы увидеть документацию команды.
+Всегда используйте команду "exit" при закрытии monero-wallet-cli, чтобы сохранить
+состояние текущего сеанса. В противном случае вам может потребоваться
+снова синхронизировать ваш кошелек (ваши ключи кошелька в любом случае НЕ подвержены риску).
+
+Generated new wallet: 45oAnBFnZo3Dge671merNyNCeoD1ddCJ35GfqMX5uVwBeZf6g5Mnti4QbDE44fyctDboABpx4fQdThCmmxkjCeQ1VjHRXTb
+View key: e9319362f062f219f049c0a66e5360a8b70cda9758dc41bd941612477f4a650b
+
+пополнить монеро
+45oAnBFnZo3Dge671merNyNCeoD1ddCJ35GfqMX5uVwBeZf6g5Mnti4QbDE44fyctDboABpx4fQdThCmmxkjCeQ1VjHRXTb
+
+ртправить
+transfer <address> <amount>
+
+address new R_monero-kiss-my-asid
+1  83Z3uAEJBc15rTU85pAxjqCef322YRtTyDocWLAJKxaeEtPWaGyUZHEMpA93BWRrYpfwbjSyeHS2P2pHchnh2ZEL2AtmcjV  R_monero-kiss-my-asid 
+
+R_monero-0address

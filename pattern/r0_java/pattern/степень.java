@@ -1,0 +1,1 @@
+(int) Math.pow(array[n], n)

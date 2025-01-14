@@ -1,0 +1,3 @@
+lsb_release -a // дистрибутив
+или
+Посмотрите файл /etc/apt/sources.list.

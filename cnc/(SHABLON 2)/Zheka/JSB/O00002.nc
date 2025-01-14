@@ -1,0 +1,30 @@
+%
+O00002 (CENTR)
+G00 G17 G40 G49 G80 G90
+G54 
+G52 X [ 27. - 16. ] Y [ 0. ] Z [ 0. ] 
+
+T16 D16 M06
+G43 H16 
+S2000 M03
+
+#10= 0.05 (FEED 1) 
+
+#3= 2. (BEZOPASNOE RASSTOYANIE) 
+#1= -2. (GLUBINA) 
+
+G95 
+
+G00 X0. Y0. Z10. 
+G00 Z#3 
+G01 Z#1 F#10 
+G00 Z#3 
+
+G69 G94 
+G00 Z100. 
+G52 X0. Y0. Z0. 
+M99 
+
+
+
+%

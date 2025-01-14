@@ -1,0 +1,4 @@
+// очистить
+echo '' > ~/.config/ksshaskpass
+
+

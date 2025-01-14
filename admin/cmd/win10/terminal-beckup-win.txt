@@ -1,0 +1,16 @@
+wbadmin start backup -backupTarget:F:\ -include:C: -allCritical
+
+Резервное копирование и восстановление > BIOS/UEFI > Boot > передать приоритет диску Д
+
+// создать еще один том разбить диск на два
+diskpart
+list disk
+select disk 0
+create partition primary
+format fs=ntfs quick
+assign letter=F
+select volume F
+shrink desired=192000
+create partition primary
+format fs=ntfs quick
+assign letter=G

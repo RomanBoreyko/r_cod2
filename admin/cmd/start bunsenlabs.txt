@@ -1,0 +1,335 @@
+
+#установка
+	#имя флешки
+		lsblk
+	#размонтировать
+		sudo umount /dev/sdb1
+	#форматнуть
+		sudo mkfs -t ext4 -L FLASH /dev/sdb1
+	#создать установочную флешку
+		sudo dd bs=4M if=/home/robor/Downloads/beryllium-1-i386.hybrid.iso of=/dev/sdb status=progress oflag=sync
+
+#Ньюанс по установке
+
+	#загружаемся с флешки выбираем start install
+	#смотрим внизу екрана клавишу редактирования это TAB или «E»
+	#видим екран и строку в которой нужно ввести ipv6.disable=1
+		перед -- quiet
+	Ctrl-x - чтобы загрузится с измененной записи
+
+	// инфа о вайфае
+		inxi -Nxxxz	
+	//  Inxi сообщит, правильно ли ваш компьютер распознал ваш Wi-Fi-чип и загрузил правильные драйверы
+
+
+# bl-welcome
+	старт
+	isenkram-cli - ut for install
+
+sudo apt-get install grub
+// grub-install /dev/sda
+// update-grub
+// https://forums.bunsenlabs.org/viewtopic.php?id=7520
+
+
+# download from website
+	telegram - https://desktop.telegram.org/
+		chmod +x /home/r_/Downloads/Telegram/Telegram
+			./Telegram
+	
+	obsidian - https://obsidian.md/
+		chmod +x Obsidian-1.4.16.AppImage
+		./Obsidian-1.4.16.AppImage
+		
+	zoom - https://zoom.us/download?os=linux
+		sudo dpkg -i zoom_amd64.deb
+		zoom
+
+	slack тоже скачан slack-4.34.121-0.1.el8.x86_64.rpm
+		sudo apt --fix-broken install
+		sudo apt install alien -y
+		sudo alien slack-4.34.121-0.1.el8.x86_64.rpm
+		sudo dpkg -i slack_4.34.121-1.1_amd64.deb
+		
+	
+# install
+	sudo apt update && sudo apt upgrade
+
+	sudo apt-get install fasttrack-archive-keyring
+	echo "deb https://deb.debian.org/debian bullseye-backports main contrib non-free" | sudo tee /etc/apt/sources.list.d/debian-bullseye-backports.list
+	echo "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib non-free" | sudo tee /etc/apt/sources.list.d/debian-bullseye-fasttrack.list
+	echo "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib non-free" | sudo tee -a /etc/apt/sources.list.d/debian-bullseye-fasttrack.list
+
+//	sudo apt-get install virtualbox virtualbox-ext-pack
+
+	sudo apt install mono-complete synaptic ibus fancontrol ffmpeg flameshot neofetch msttcorefonts audacity git openssh-server telegram-desctop
+		sudo pwmconfig
+
+#virtbox
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install fasttrack-archive-keyring
+	echo "deb https://deb.debian.org/debian bullseye-backports main contrib non-free" | sudo tee /etc/apt/sources.list.d/debian-bullseye-backports.list
+	echo "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-fasttrack main contrib non-free" | sudo tee /etc/apt/sources.list.d/debian-bullseye-fasttrack.list
+	echo "deb https://fasttrack.debian.net/debian-fasttrack/ bullseye-backports-staging main contrib non-free" | sudo tee -a /etc/apt/sources.list.d/debian-bullseye-fasttrack.list
+	sudo apt-get update
+	sudo apt-get install virtualbox virtualbox-ext-pack
+
+	virtualbox --version
+
+
+	# jupyter
+		sudo apt install python3 python3-pip jupyter-notebook python3-notebook python3-virtualenv
+
+		python3 -m venv myenv
+		source myenv/bin/activate
+		pip3 install jupyter
+		jupyter-notebook --allow-root
+		pip3 install --upgrade jupyter
+		deactivate
+
+	#нода и реакт
+		sudo apt install build-essential
+		sudo apt install curl
+		curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+		sudo apt-get install -y nodejs
+		sudo npm install -g create-react-app
+		create-react-app reactapp
+		npx create-react-app shader-project
+		npm install gl-react@^4.0.0 gl-react-dom@^4.0.0
+		npm install --save-dev glslify glslify-loader
+		
+	#glsl
+		sudo apt install mesa-utils libglfw3-dev libglew-dev libglm-dev
+
+	#vscode
+		curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+		sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft-archive-keyring.gpg
+		sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/usr/share/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+
+//	https://git-lfs.com/
+	//	git lfs install
+
+	#sublime
+		sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+		curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/sublimehq-pub.gpg
+     	   	echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+		sudo apt install -y sublime-text
+		
+		import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read())	
+	
+		c+s+p: install
+			Python 3
+			Anaconda
+			SublimeLinter
+			Jedi - Python autocompletion
+			AutoPEP8
+			TensorFlow
+			helium
+
+		sudo update-alternatives --install /usr/bin/bl-text-editor bl-text-editor /opt/sublime_text/sublime_text 50
+
+	# шпоры
+		curl cht.sh/<язык>/:list
+		curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
+		sudo apt install rlwrap
+
+		cht.sh python reverse a list
+		cht.sh --shell
+		cd python
+
+		c и C - копирование
+		stealth Q - скрытый режим
+
+How to change time?
+	sudo timedatectl set-timezone Europe/Kiev
+	sudo service systemd-timesyncd restart
+
+
+How to change lang?
+xinput list
+xinput list-props ""
+
+	setxkbmap ru
+	
+	#or
+		sudo dpkg-reconfigure keyboard-configuration
+		#переключение в ibus
+			gsettings set org.freedesktop.ibus.general.hotkey triggers "['<Alt>Shift_L']"
+		sudo service keyboard-setup restart
+
+// не понимаю как но по тыкав в ок но и по выбирав клавишы я получил три ленга и переключение шорткатом
+.. клава была генерик 105 пк и чето еще
+
+	/etc/default/keyboard
+		# KEYBOARD CONFIGURATION FILE
+		# Consult the keyboard(5) and xkeyboard-config(7) manual page.
+		XKBMODEL="pc105"
+		XKBLAYOUT="us,ru"
+		XKBVARIANT=""
+		XKBOPTIONS="grp:alt_shift_toggle, grp:rctrl_switch,nbsp:level3,lv3:ralt_switch"
+		BACKSPACE="guess"
+
+# KEYBOARD CONFIGURATION FILE
+# Consult the keyboard(5) and xkeyboard-config(7) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="us,ru,ua"
+XKBVARIANT=""
+XKBOPTIONS="grp:alt_shift_toggle,grp:rctrl_toggle,nbsp:level3,lv3:ralt_switch"
+BACKSPACE="guess"
+
+
+setxkbmap -query
+
+sudo service keyboard-setup restart
+sudo service display_manager restart
+
+за работало после вынужденного ребута не понимаю как это работает.
+до этого шорт не работал и я использовал
+	setxkbmap ru
+и в какой то моммент вообще все шорты отрубились(словно из за перехода на рус) и все окна перестали реагировать на мыш
+
+
+
+
+#autostart
+	win > preferences > BunsenLabs > edit autostart 
+	home/<user>/.config/bunsen/autostart
+
+## Как отключить тачпад на bunsenlab?
+	egrep -i 'synap|alps|etps|elan' /proc/bus/input/devices
+	xinput list
+	# virtual core pointer synaptics s3203
+		xinput set-prop 12 'Device Enabled' 0
+
+	#autostart
+	/home/r0-bl/.config/bunsen/autostart
+		xinput set-prop 12 'Device Enabled' 0
+
+
+## Как изменить шорты?
+	# /home/r0-bl/.xbindkeysrc
+	# win > preferences > keybinds > Edit .xbindkeysrc
+
+		# телеграмм
+		"/home/r_/Downloads/Telegram/Telegram"
+			Mod4 + Alt + t
+
+		# Обсидиан
+		"/home/r0-bl/Downloads/Obsidian-1.3.5.AppImage"
+			Mod4 + o
+
+		# Show dmenu
+		"~/.config/dmenu/dmenu-bind.sh"
+			Mod4 + Shift + d
+
+		#flameshot
+		"/usr/bin/flameshot gui -d 3000"
+			Mod4 + Print
+
+	# win > preferences > keybinds > restart
+
+
+
+
+
+
+
+
+
+
+## Как заменить переменную вызывающую геани, на вызов саблайма?
+1. Найти где bl-text-editor определяется.
+	grep -r "bl-text-editor" /etc
+
+2. Изменить
+	
+
+
+
+
+
+
+
+
+## шорты на десктоп
+	.config/conky/...
+
+## сломалось?
+    bl-user-setup --reset
+    // --help
+
+# ssh + git
+	#перевод ветки репа на ssh адресс вместо https который требует токен
+		git remote remove origin
+		git remote add origin git@github.com:R0-32/conspect.git
+		git remote -v
+	#создание ssh ключа и привязывание его к гитхабу
+		ssh-keygen -t rsa -b 4096 -C "wodrom@gmail.com"
+	# ~/.ssh/id_rsa (приватный ключ) и ~/.ssh/id_rsa.pub (публичный ключ).
+	# скопировать cat ~/.ssh/id_rsa.pub
+	# вставить https://github.com/settings/ssh/new
+		git config --global user.name "R0-32"
+		git config --global user.email "wodrom@gmail.com"
+		git config --global core.sshCommand "ssh -i ~/.ssh/id_rsa"
+
+# алиас + гит
+	~/.gitconfig или git config --global --edit
+	[alias]
+		acp = !git add . && git commit -m "auto-commit" && git push origin main
+		del = curl -X DELETE -H "Authorization: token ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC4S8DskpF4U9A033Dri0ME9ARMW3i7jlf84ZPe7SVBy1BrCJFMs0IMR0fuUnnMwZ5NcX++cEU3pliYutjk6P6h01AODgNgKn1OdfKzklBWzLQvQ8XUjYZvhjIAjXo1cG9FuBz9AJUWDVM+loTNa/Q+dcrrQBvEeSf85ogsoER+j3nwIaC9Aveh2vUVaYd+HyxntRhZq9cBjTUKQI7FKSogfncl0zBnxderxxiWc2ING3lqTMDV4PeWM7Hb23VtLUJdnMOuyWoZC0+6eber915GW6jlhgjbfJQ+xPD5noADwk5Tn22uTXM1Ukza9sFalWP6Nur1w8F0Ih4G3gUZsKPUA1sZB8M6gXkHasZpJTvzpM9/ScfWAeJJm4arbYT0TYcLsk7RkvgXcRoiu317sc6QIyPRooV8LOmx94IdfoWqUQqsFm3mYca8hdFLRihn7s2DwcgaHw8fDphMQTrG4Da3PqlW2lK9xPKAgMPUGCngE5nZWg1DVL3umlienhwEhabL83TBeqkKpuh9mh+H0VQGh8OXszf/ViiGdcIi2uH5iHbPX3SxGJ20WxAfBAi4vw8cP95ioTZjC0HS39Gu3EuqqQKmG5kC/r3ku8LtB+mnJc1j4AqEUExV6C4Q8YUUosouT0EybbIAjcpO6Iioxa4ZHhOCDLMzqqshsjzxKFETLQ== wodrom@gmail.com" https://api.github.com/repos/R0-32/
+
+#добавить список шортов на екран
+	#узри процесс Conky и путь к файлу
+	ps aux | grep conky
+	geany /home/r0-bl/.config/conky/BL-Beryllium-conky.conf
+	#/home/r0-bl/.xbindkeysrc
+	#создал копию с другим названием
+	#и через вин>preferences>Conky>Conky Manager добавил копию
+		в коде изменил alignment = 'top_left',
+			получил две колонки
+
+#бекапы
+	# План 0 
+		bl-user-setup --reset
+
+	# План А
+		sudo apt install timeshift
+			создать снимок в хомяка
+
+	# План Б
+		// упаковать
+		sudo tar czvf settings.tar.gz ~/.config
+		// распаковать
+		tar xzvf settings.tar.gz
+		// заменить
+		mv ~/.config ~/
+
+#булетпруфы
+	0) 
+
+#cmd-short
+	~/.bashrc
+		# Функция для вычисления использования памяти указанного процесса
+		r0_mem() {
+		  process=$1
+		  result=$(ps aux | grep "$process" | awk '{sum+=$6} END {print sum}')
+		  echo "scale=2; $result / 1024" | bc
+		}
+	source ~/.bashrc
+	// r0_mem firefox
+
+
+
+
+
+
+#wine
+	sudo dpkg --add-architecture i386 
+	sudo mkdir -pm755 /etc/apt/keyrings
+	sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+	sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
+	sudo apt update
+	sudo apt install --install-recommends winehq-stable

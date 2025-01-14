@@ -1,0 +1,31 @@
+hw2
+Create Custom Object:
+    setup > Obj Manager > Create > Custom ???? > 
+        label:
+        PluralLabel: ...s
+        CheckBox Launch New Custom Tab Wizard after saving this custom obj
+    > save > click:Tab style > nextnextsave
+
+Create Records:
+    Sales > navBar... > New > ... > save
+Create Custom Fild
+    setup > obj M > F&R > New >
+Create validation rules
+    setup > obj m > Property > Validation Rule >
+        Rule Name: Validation_rules_for_Property_Price
+        Error Condition Formula:
+            AND(
+                NOT(ISBLANK(Price__c)),
+                NOT(Price__c < 0)
+            )
+        Error Message: Price__c is empty or less then Zero.
+Assign the correct page layouts to record types.
+    setup > obj m > Page Layout > Page Layout Asignment > Edit Assigment > 
+        Page Layout To Use: ...
+        take profiles
+Create Property records with pictures
+    Dreamhouse
+        https://login.salesforce.com/packaging/installPackage.apexp?p0=04t3h0000043scGAAQ
+        Properties(navBar-tab) > new - fill - save > open record > picture(navBarTab) > add
+
+hw3

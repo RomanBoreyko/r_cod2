@@ -1,0 +1,2 @@
+// материнка
+wmic baseboard get product,manufacturer,version 

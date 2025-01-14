@@ -1,0 +1,138 @@
+# For the benefit of emacs users: -*- shell-script -*-
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 1.8.6
+#
+# This file is adapted for BunsenLabs Linux.
+#
+
+# NOTE: There is a gui available for editing keybinds - 'xbindkeys-config'.
+# However we don't recommend its installation and use because it has some bugs.
+
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+
+# To identify a key, you can run 'xbindkeys --key' or
+# 'xbindkeys --multikey' in a terminal
+# and put one of the two output lines in this file.
+
+# List of modifiers:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+# Mod4 is also known as the Super or Windows key.
+#
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events.
+#
+# By default, xbindkeys does not pay attention to the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines below if you want to pay attention to them.
+#
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# NOTE xbindkeys reloads its configuration file each time it has changed.
+# If you want to force it to reload its configuration file,
+# you can send a HUP signal:
+#
+#       killall -HUP xbindkeys
+#
+# Or if that's not enough, a full restart:
+#
+#       pkill -x xbindkeys
+#       xbindkeys_autostart
+#
+# (Sometimes this is needed.)
+# When a HUP signal is sent to xbindkeys,
+# changes in $HOME/.xbindkeysrc take effect only after moving the mouse.
+
+# See 'man xbindkeys' for more information.
+
+# Show main menu
+"jgmenu_run"
+    Mod4 + space
+
+# Run Program
+"gmrun"
+    Mod4 + r
+    
+# Terminal
+"x-terminal-emulator"
+    Mod4 + t
+
+# Web Browser
+"x-www-browser"
+    Mod4 + w
+
+# File Manager
+"bl-file-manager"
+    Mod4 + f
+
+# Editor
+"bl-text-editor"
+    Mod4 + e
+
+# Media Player
+"bl-media-player"
+    Mod4 + m
+
+# Volume
+"pavucontrol"
+    Mod4 + v
+
+# htop task manager
+"x-terminal-emulator -T 'htop task manager' -e htop"
+    Mod4 + h
+
+# Lock Screen
+"bl-lock"
+    Mod4 + l
+
+# Logout
+"bl-exit"
+    Mod4 + x
+
+# Kill a Window
+"xkill"
+    Mod4 + Escape
+
+# Print Screen (xfce)
+#"xfce4-screenshooter"
+#    Print
+
+# Print Screen (scrot)
+#"scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/ ; bl-image-viewer ~/Pictures/screenshots/$f'"
+#    Alt + Print
+
+# Scrot with 10s delay
+#"scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/ ; bl-image-viewer ~/Pictures/screenshots/$f'"
+#    Control + Alt + Print
+
+# Show xbindkeys settings
+# (install tk to use this)
+#"xbindkeys_show"
+#    Control + Shift + q
+
+# телеграмм
+"/home/r0-bl/Downloads/Telegram/Telegram"
+	Mod4 + Alt + t
+
+# Show dmenu
+"~/.config/dmenu/dmenu-bind.sh"
+	Mod4 + Shift + d
+
+#flameshot
+"/usr/bin/flameshot gui -d 3000"
+	Mod4 + Print
+
+
+##################################
+# End of xbindkeys configuration #
+##################################
+

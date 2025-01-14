@@ -1,0 +1,9 @@
+# jupyter
+	sudo apt install python3 python3-pip jupyter-notebook python3-notebook python3-virtualenv
+
+	python3 -m venv myenv
+	source myenv/bin/activate
+	pip3 install jupyter
+	jupyter-notebook --allow-root
+	pip3 install --upgrade jupyter
+	deactivate

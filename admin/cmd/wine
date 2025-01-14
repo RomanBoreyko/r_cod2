@@ -1,0 +1,9 @@
+winecfg
+find ~/.wine -name "Telegram.exe"
+sudo apt install winetricks
+winetricks vcrun2015
+winetricks vcrun2019
+winetricks dotnet472
+wine /home/orangepi/.wine/drive_c/users/orangepi/AppData/Roaming/Telegram\ Desktop/Telegram.exe
+sudo apt update
+sudo apt install telegram-desktop

@@ -1,0 +1,20 @@
+
+
+1)
+	sudo apt-get install cgroup-tools
+	sudo cgcreate -g memory:/firefox_limit
+	sudo cgset -r memory.limit_in_bytes=1700000000 firefox_limit
+	sudo cgexec -g memory:firefox_limit firefox
+
+2) сломано
+OOM killer
+	/etc/sysctl.conf
+		vm.overcommit_memory = 2
+		vm.oom_kill_allocating_task = 1
+		vm.min_free_kbytes = 400000
+	sudo sysctl -p
+
+#проверить 
+	sysctl vm.overcommit_memory
+	sysctl vm.oom_kill_allocating_task
+	sysctl vm.min_free_kbytes

@@ -1,0 +1,67 @@
+0. Заливка образа на флешку
+
+dd bs=4M if=/home/r0/Downloads/archlinux-2022.12.01-x86_64.iso of=/dev/sdb status=progress oflag=sync
+
+#менеджер_пакетов
+телеграмм
+fancontrol
+audacity
+
+#гоетия #демоны
+sudo apt install htop
+virtualbox
+transmission
+thunar
+mintinstall
+gnome-calculator
+
+sudo apt update && sudo apt upgrade
+sudo apt install flameshot
+sudo apt install ffmpeg
+sudo apt install feh
+
+// отключение тачпада
+ctrl+D  > muon > synaptic:
+нашел строку со словом драйвер
+установил
+дождался предложения перезагрузки и блаблабла драйвера и чтото там на инглише
+ребутнулся
+
+synclient TouchpadOff=1
+#нерешено
+
+sudo apt install telegram-desktop
+sudo apt install fancontrol
+sudo pwmconfig
+sudo apt install htop
+sudo apt install virtualbox-qt
+sudo apt install ffmpeg
+sudo apt install flameshot
+sudo apt install feh
+sudo apt install audacity
+neofetch про систему
+Thunar менеджер директорий
+transmission торренты
+
+R:\os\i3, [23.12.2022 20:06]
+#lang
+exec_always "setxkbmap -model pc105 -layout us,ru -variant ,ruu, -option grp:alt_shift_toggle,iv3:ralt_switch"
+
+#screen
+bindsym Print exec flameshot gui
+
+#wallpaper
+exec_always "feh --bg-center /home/r-mint/Изображения/wallpaper-i3.jpg"
+
+#touchOff
+exec_always "synclient TouchpadOff=1"
+
+#telegram
+exec_always "/home/r-mint/Загрузки/Telegram/Telegram"
+bindsym $mod+t exec "/home/r-mint/Загрузки/Telegram/Telegram"
+
+#funcontrol exec_always "sudo pwmconfig"
+#terminal transperansy exec_always compton
+
+R:\os\i3, [24.12.2022 13:01]
+sudo apt install git

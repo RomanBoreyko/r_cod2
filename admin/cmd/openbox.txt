@@ -1,0 +1,5 @@
+install openbox
+mkdir -p ~/.config/openbox
+cp /etc/xdg/openbox/* ~/.config/openbox/
+
+cd /path/to/the/downloads

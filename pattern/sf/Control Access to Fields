@@ -1,0 +1,13 @@
+Control Access to Fields 
+    Set Your Org-Wide Sharing Defaults
+        setup>Sharing Settings -> Organization-Wide Defaults area -> edit -> ... -> Grant Access Using Hierarchies
+    Add Field Access with a Permission Set
+        setup>Permission Set>...->Object Settings->edit->Field Permissions
+            ->Manage Assignments->user->Add Assignments->done 
+    Create a profile and permission set to handle field access
+        0. setup > Profiles > clone:Standard User -> name: sales -> Description:hw3pg -> save
+            Object Settings -> 
+                Accounts, Contacts -> edit -> Object Permissions -> checkboxes
+                Accounts -> edit -> Field Permissions -> Rating -> checkboxes x
+        1. setup > permission set > new > Rating -> save ->
+            Accounts -> edit -> Field Permissions -> Rating -> checkboxes v

@@ -1,0 +1,7 @@
+// win10
+wmic csproduct get name - идентификатор название ноута
+
+sysdm.cpl - свойства системы
+msinf032 - сведения о системе 
+regedit.exe - таск манагер
+rundll32 sysdm.cpl,EditEnvironmentVariables - переменные среды

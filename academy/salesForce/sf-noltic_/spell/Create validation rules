@@ -1,0 +1,8 @@
+setup > obj m > Property > Validation Rule >
+    Rule Name: Validation_rules_for_Property_Price
+    Error Condition Formula:
+        AND(
+            NOT(ISBLANK(Price__c)),
+            NOT(Price__c < 0)
+        )
+    Error Message: Price__c is empty or less then Zero.

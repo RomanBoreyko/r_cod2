@@ -1,0 +1,23 @@
+Потребовалось распечатать конспект с подсветкой синтаксиса.
+Вот решение
+
+1. собираем все файлы в директории, в один, рекурсивно и добавляем названия файлов.
+find . -type f \( -name "*.md" -o -name "*.js" -o -name "*.cs" -o -name "*.csproj" \) -exec sh -c 'echo "File: $1"; cat "$1"; echo' sh {} \; > combined.html
+
+2. В combined.html добавляем подсветку и переносы на новую строку
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<body>
+<pre><code
+style="white-space: pre-wrap;"
+class="language-csharp hljs-line-highlight language-html"
+>
+
+3. открываем в браузере > жмем печать > сохраняем в пдф
+
+Дефолтный результат не впечатляет. Наверняка можно упороться и подобрать подсветку по лучше. Но другие варианты были сложнее.

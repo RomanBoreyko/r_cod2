@@ -1,0 +1,4 @@
+setup > FB -> Role -> New Role
+    GymManager_hw3 | GymManager_hw3_RN | noltic
+        GymAnalyst_hw3 | GymAnalyst_hw3_RN | GymManager_hw3
+            GymReceptionist_hw3 | GymReceptionist_hw3_RN | GymAnalyst_hw3

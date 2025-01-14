@@ -1,0 +1,15 @@
+Setup > Users -> Users -> New User
+    userGymManager_hw3 | userGymManager_hw3_LN | ugm_hw3 | wodrom@gmail.com | wodrom@gmail.com_ugm | User16347629314086802337
+    role: GymManager_hw3
+    user license: Salesforce
+    Profile: System Administrator
+    Generate new password and notify user immediately
+    active: v
+    save
+
+Setup > Users -> Users -> New User
+    R_0 | R_0_LN | R_0_Al | wodrom@gmail.com | R_wodrom@gmail.com | User16347629314086802337
+    user license: Chatter Free
+    profil: ...
+    Generate new password and notify user immediately
+    save

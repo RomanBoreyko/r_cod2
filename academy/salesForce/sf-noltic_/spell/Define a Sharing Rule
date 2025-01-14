@@ -1,0 +1,10 @@
+setup>Sharing Settings>
+    ->Manage sharing settings: drop-down list
+    ->Sharing Rules: new > fill 
+        -> Based on record owner: checkbox
+        -> Select which records to be shared
+            -> category
+            -> set of users or lookup field
+        -> Select the users to share with
+            -> access to the data
+    save

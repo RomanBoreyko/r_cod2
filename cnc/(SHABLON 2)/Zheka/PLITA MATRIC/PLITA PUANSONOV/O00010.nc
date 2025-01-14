@@ -1,0 +1,31 @@
+%
+O00010 (RAZV)
+G00 G17 G40 G49 G80 G90
+G54 
+G52 X [ - 205. ] Y [ + 110. ] Z [ 0. ] 
+
+T11 D11 M06
+G43 H11 Z100. 
+S200 M03
+
+#10= 0.2 (FEED) 
+
+#3= 2. (BEZOPASNOE RASSTOYANIE) 
+#1= -15. (GLUBINA SV) 
+
+G95 
+
+G00 X0. Y0. 
+G00 Z#3 M08 
+G01 Z#1 F#10 
+G01 Z#3 F [ #10 * 3. ] 
+M09 
+
+G69 G94 
+G00 Z100. 
+G52 X0. Y0. Z0. 
+M30 
+
+
+
+%

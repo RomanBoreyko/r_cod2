@@ -1,0 +1,14 @@
+ssh remote_host
+ssh remote_username@remote_host
+
+запуска сервера ssh ?
+
+sudo pacman -S openssh
+sudo systemctl enable sshd
+sudo systemctl start sshd
+sudo systemctl status sshd
+
+ssh control for android
+
+putty shh
+    

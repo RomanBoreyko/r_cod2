@@ -1,0 +1,14 @@
+setup > permision set -> new
+    Card_Manager_cw
+    Card_Manager_cw_api
+    manage assigment -> add asign -> check: userGymManager_hw3 -> assign
+
+    Gym_Visits_Permission_hw3
+    Gym_Visits_Permission_hw3_api
+    Object Settings -> gym visit -> edit -> objPermission: read, Tab Setting: visible.
+
+setup > Permission Sets -> New
+    cleaner_ps
+    cleaner_ps_api
+    license: Salesforce
+        Manage Assignments -> Add Assignments -> checkBox -> user -> Assign 

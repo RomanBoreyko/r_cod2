@@ -1,0 +1,24 @@
+%
+O00099 (OSNOVA)
+G00 G17 G40 G49 G80 G90
+G54 
+G52 X0. Y0. Z0. 
+
+M98 P2 (SV) 
+M01 
+
+M98 P3 (FASKI D6.8) 
+M01 
+
+M98 P5 (FASKA D25) 
+/ #3006= 1 (DMUHAY) 
+
+/ M98 P4 (M8) 
+
+G00 G53 Y0. Z0. 
+G52 X0. Y0. Z0. 
+M30
+
+
+
+%

@@ -1,0 +1,7 @@
+setup>objM>Oportunity>
+    Lookup: Property
+        Data Type	Lookup
+        Field Label	Property
+        Field Name	Property
+        API Name	Property__c
+    Standard objects can also be used

@@ -1,0 +1,10 @@
+# Это файл конфигурации пользователя Git.
+[user]
+# Пожалуйста, адаптируйте и раскомментируйте следующие строки:
+	user = R0-32
+	email = wodrom@gmail.com
+	name = R0-32
+[core]
+	sshCommand = ssh -i ~/.ssh/id_rsa
+[alias]
+	acp = !git add . && git commit -m "auto-commit" && git push origin main

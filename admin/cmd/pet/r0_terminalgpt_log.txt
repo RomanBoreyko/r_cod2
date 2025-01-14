@@ -1,0 +1,50 @@
+pip install terminalgpt -U --user
+pip install terminalgpt -U --user --target=/path/to/desired/directory
+curl -O https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe
+./python-3.9.5-amd64.exe
+python --version
+pip show terminalgpt
+
+export PATH=$PATH:"C:\Users\New\AppData\Roaming\Python\Python311\Scripts"
+terminalgpt
+
+по рылся и кикнул лишние версии питона
+не запускалось через мой bash mintty в MINGW64
+
+winpty terminalgpt install
+ввел апи
+работает с багами разметки и доп символами
+
+поставил conemu
+python -m terminalgpt install
+
+python
+exit() - прерывание
+
+python -m terminalgpt.main install 
+- поставилось
+terminalgpt new 
+- нет
+python -m pip install -r requirements.txt 
+- баг 
+
+нужно добавить его в ПАЧ
+echo %PATH%
+
+C:\Users\New\AppData\Roaming\Python\Python311\site-packages\terminalgpt
+
+echo $PATH 
+
+представь себе что ты корпоративный учитель и обьясняй так чтобы понял даже лабрадор 
+
+
+все хуйня го по новой
+реп
+https://github.com/jucasoliveira/terminalGPT
+
+комманды
+npm -g install terminalgpt
+npx terminalgpt
+npx terminalgpt chat
+
+

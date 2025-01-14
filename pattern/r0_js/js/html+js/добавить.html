@@ -1,0 +1,51 @@
+<html>
+  <script>
+let r_AddEventCounter = 3;
+const r_CreateNewEvent=()=>{
+  r_AddEventCounter++
+  // take
+  let r_box2FormSave = {
+    r_box2ImgNew: document.getElementById('r_box2ImgNew').value,
+    r_box2H1New: document.getElementById('r_box2H1New').value,
+    r_box2TimeNew: document.getElementById('r_box2TimeNew').value,
+    r_box2LocationNew: document.getElementById('r_box2LocationNew').value,
+    r_box2AboutNew: document.getElementById('r_box2AboutNew').value
+  }
+  // add
+  document.getElementById('r_box1').innerHTML += `
+    <div class="col">
+    <div class="r_block1-col${r_AddEventCounter}">
+      <img id="r_box1Col${r_AddEventCounter}Img" src="${r_box2FormSave.r_box2ImgNew}"/>
+      <h1 id="r_box1Col${r_AddEventCounter}H1">${r_box2FormSave.r_box2H1New}</h1>
+      <p id="r_box1Col${r_AddEventCounter}Time">${r_box2FormSave.r_box2TimeNew}</p>
+      <p id="r_box1Col${r_AddEventCounter}Location">${r_box2FormSave.r_box2LocationNew}</p>
+      <span id="r_box1Col${r_AddEventCounter}About">${r_box2FormSave.r_box2AboutNew}</span>
+      <button id="r_box1Col${r_AddEventCounter}TimeBtn" onClick="r_TakeBack0()">
+        BOOK
+      </button>
+      <button id="r_box1Col${r_AddEventCounter}DeleteBtn" onClick="r_DeleteCol()">
+            delete
+          </button>
+    </div>
+    </div>  
+    `;
+}
+
+  </script>
+  <body>
+    <button id="r_block2Right" onClick="r_CreateNewEvent()">Create</button>
+  </body>
+</html>
+
+
+<!--  -->
+
+  
+  
+const para = document.createElement("p");
+para.innerHTML = "This is a paragraph.";
+document.getElementById("myDIV").appendChild(para);
+
+const para = document.createElement("p");
+para.innerText = "This is a paragraph";
+document.body.appendChild(para);

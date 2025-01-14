@@ -1,0 +1,17 @@
+//Don't change this code
+static class CreditCard {
+  double balance;
+
+  public CreditCard(double balance) {
+    this.balance = balance;
+  }
+  
+  //Write code below this line
+  public void updateBalance(double r0Withdrawing) {
+    if (balance + r0Withdrawing >= 0) {
+      balance += r0Withdrawing;
+    }
+  }
+  //Write code above this line
+}
+

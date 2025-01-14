@@ -1,0 +1,23 @@
+npm install gl-react@^4.0.0 gl-react-dom@^4.0.0
+npm install --save-dev glslify glslify-loader
+
+Установите пакет компилятора GLSL для OpenGL: 
+	sudo apt install mesa-utils
+
+Установите библиотеку GLFW для создания оконного контекста: 
+	sudo apt install libglfw3-dev
+
+Установите библиотеку GLEW для работы с расширениями OpenGL: 
+	sudo apt install libglew-dev
+
+Установите библиотеку GLM для математических вычислений: 
+	sudo apt install libglm-dev
+
+запустил реакт
+написал код
+
+git remote add origin https://github.com/R0-32/shader-art-page-one-react.git
+
+npm install --save-dev gh-pages
+
+https://R0-32.github.io/shader-art-page-one-react/

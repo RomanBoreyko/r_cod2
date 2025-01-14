@@ -1,0 +1,1 @@
+setup>app>find:App Manager>New Lightning App>fill>save

@@ -1,0 +1,5 @@
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+sudo chmod +x ./dotnet-install.sh
+./dotnet-install.sh --version latest
+sudo apt install mono-complete
+

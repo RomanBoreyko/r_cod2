@@ -1,0 +1,58 @@
+  <!-- 
+    принять r_box1ContentTime, положить в r_contentSave
+    в r_box2ContentTime положить r_contentSave
+  -->
+  <script>
+    const r_Change=()=> {
+      const r_contentSave = document.getElementById('r_box1ContentTime').innerHTML;
+      document.getElementById('r_box2ContentTime').innerHTML = r_contentSave;
+    }
+  </script>
+
+  <div id="r_box1ContentTime">
+    from 10:00 to 11:00
+  </div>
+  <button id="r_box1ContentTimeBtn" onClick="r_Change()">
+    BOOK
+  </button>
+
+  <div id="r_box2ContentTime"></div>
+
+  <!-- сложить в обж и выложить дальше -->
+
+    
+  <script>
+    const r_TakeBack=()=> {
+      let r_contentSave = {
+        r_box1ContentImg: document.getElementById('r_box1ContentImg').innerHTML,
+        r_box1ContentH1: document.getElementById('r_box1ContentH1').innerHTML,
+        r_box1ContentTime: document.getElementById('r_box1ContentTime').innerHTML,
+        r_box1ContentLocation: document.getElementById('r_box1ContentLocation').innerHTML,
+        r_box1ContentAbout: document.getElementById('r_box1ContentAbout').innerHTML
+      };
+      document.getElementById('r_box2ContentImg').innerHTML = r_contentSave.r_box1ContentImg;
+      document.getElementById('r_box2ContentH1').innerHTML = r_contentSave.r_box1ContentH1;
+      document.getElementById('r_box2ContentTime').innerHTML = r_contentSave.r_box1ContentTime;
+      document.getElementById('r_box2ContentLocation').innerHTML = r_contentSave.r_box1ContentLocation;
+      document.getElementById('r_box2ContentAbout').innerHTML = r_contentSave.r_box1ContentAbout;
+    }
+  </script>
+
+
+<img id="r_box1ContentImg" src="pik-conf.png"/>
+<h1 id="r_box1ContentH1">Sync-Up</h1>
+<p id="r_box1ContentTime">10pm-11pm</p>
+<p id="r_box1ContentLocation">Zoom</p>
+<span id="r_box1ContentAbout">Tell your blockers <br/> Meet new people</span>
+
+<button id="r_box1ContentTimeBtn" onClick="r_TakeBack()">
+  BOOK
+</button>
+
+
+<img id="r_box2ContentImg" src="#"/>
+<h1 id="r_box2ContentH1"></h1>
+<p id="r_box2ContentTime"></p>
+<p id="r_box2ContentLocation"></p>
+<p id="r_box2ContentAbout"></p>
+

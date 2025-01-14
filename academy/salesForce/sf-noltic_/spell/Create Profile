@@ -1,0 +1,9 @@
+setup>profiles>clone>Coffee Maker>
+
+setup > User Management Settings -> Enhanced Profile User Interface
+    profiles -> clone -> Minimum Access - Salesforce
+        Existing Profile: Minimum Access - Salesforce
+        Profile Name: Cleaner
+        description: hw3
+        app->object setting->
+            Accounts, Contacts, Leads ->edit->checkbox->save

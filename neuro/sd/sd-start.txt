@@ -1,0 +1,46 @@
+Задачи:
+	0. Какие модели нужны
+		- F222 - body
+		- GhostMix - Ghost in the Shell style
+		- Inkpunk Diffusion - Dreambooth-trained model with a very distinct illustration style
+		- DreamShaper - portrait illustration style
+		- Stable diffusion v1.5
+		- Deliberate v2 - renders realistic illustrations
+		- Realistic Vision v2 - t generating realistic people.
+		- Protogen v2.2 (Anime) - generates illustration and anime-style images
+	0.1. Слияние моделей в процентном соотношении
+		попробовать слить
+			- F222 - body
+			- GhostMix - Ghost in the Shell style
+			- Inkpunk Diffusion - Dreambooth-trained model with a very distinct illustration style
+	0.2. ТИПЫ моделей
+		чекпоинт - содержит все что нужно для генерации
+			textual inversions - добавление файлика с ключевыми словами
+			ЛоРА - маленькие патчи для модификаторов стиля
+			hypernetworks - добавление модулей
+	1. Установить на вин10
+	1.1. Установить на банс
+	1.2. Установить на гуглколаб
+	2. узнать про
+		- dreambooth или Additional training
+		- LoRA или Lycoris
+		- гугл колаб +
+	3. Узнать как
+		- скормить нейронке картинки стиль по которому хочешь чтобы она генерировала твои промпты
+	4. Попробовать генерить на
+		- лар пк
+		- гугл колаб
+	
+5. inpainting fixing defects
+https://stable-diffusion-art.com/inpainting_basics/
+	step-by-step
+		prompt
+		inpainting model
+			v1.5 inpainting model
+			checkpoint file
+		inpaint mask
+		settings
+		add obj
+		
+		
+		
